@@ -1,0 +1,152 @@
+.pos-shell, .login {
+  min-height: 100vh;
+  color: #1c1915;
+  background: #f4efe6;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.pos-shell header, .login form, .workspace, .pos-shell section {
+  box-sizing: border-box;
+}
+
+.pos-shell header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 24px;
+  background: #1f3a34;
+  color: #f6f1e7;
+}
+
+.pos-shell header a, .pos-shell header button {
+  color: #f6f1e7;
+  margin-left: 12px;
+}
+
+.pos-shell header nav a {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.pos-shell header nav a:focus, .pos-shell button:focus, .pos-shell input:focus, .login input:focus {
+  outline: 2px solid #d97706;
+  outline-offset: 2px;
+}
+
+.workspace, .pos-shell > section {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 20px;
+  padding: 20px 24px 40px;
+}
+
+.pos-shell > section {
+  display: block;
+}
+
+.eyebrow {
+  margin: 0;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.search, .qty, .catalog {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.search input, .login input {
+  display: block;
+  width: 100%;
+  margin-top: 4px;
+  padding: 8px 10px;
+  border: 1px solid #c8bfb2;
+  background: white;
+}
+
+.catalog {
+  margin-top: 16px;
+}
+
+.product, .cart, .login form {
+  background: white;
+  border: 1px solid #e4d9c8;
+}
+
+.product {
+  width: 180px;
+  min-height: 110px;
+  text-align: left;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.product small, .muted {
+  display: block;
+  color: #6b6258;
+}
+
+.cart {
+  padding: 16px;
+  align-self: start;
+}
+
+.cart ul {
+  list-style: none;
+  padding: 0;
+}
+
+.total {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.pay, .login button, .search button, .qty button {
+  background: #1f3a34;
+  color: white;
+  border: 0;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.pay:disabled {
+  opacity: 0.5;
+}
+
+.login {
+  display: grid;
+  place-items: center;
+}
+
+.login form {
+  width: min(420px, 92vw);
+  padding: 28px;
+  display: grid;
+  gap: 12px;
+}
+
+.notice {
+  background: #e7f5ee;
+  padding: 10px 12px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px 10px;
+  border-bottom: 1px solid #e4d9c8;
+}
+
+@media (max-width: 800px) {
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+}

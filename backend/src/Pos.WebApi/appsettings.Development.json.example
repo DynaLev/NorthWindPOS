@@ -1,0 +1,31 @@
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "Jwt": {
+    "Issuer": "NorthWindPOS",
+    "Audience": "NorthWindPOS",
+    "SigningKey": "CAMBIAR_POR_UNA_CLAVE_LARGA_Y_ALEATORIA",
+    "ExpirationMinutes": 480
+  },
+  "Odoo": {
+    "BaseUrl": "http://127.0.0.1:8070",
+    "Database": "odoo20_northwind",
+    "ApiKey": "CAMBIAR_POR_TU_API_KEY_DE_ODOO",
+    "TimeoutSeconds": 30,
+    "MaxRetries": 1
+  },
+  "Auth": {
+    "Operators": [
+      {
+        "Username": "cajero",
+        "DisplayName": "Cajero Northwind",
+        "Role": "Cashier",
+        "PasswordHash": "$pbkdf2-sha256$100000$8Ub/EY1iGG8/ssP50OWwAw==$KdVzwuXCh5rxXRXXAJmkEAmdjhCE2qcyS6ftyWYBBNc="
+      }
+    ]
+  }
+}

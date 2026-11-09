@@ -1,0 +1,108 @@
+# ============================================================
+#  NorthWindPOS - .gitignore
+#  .NET (backend) + React/Vite (frontend) + secretos locales
+# ============================================================
+
+# ------------------------------------------------------------
+# Secretos y configuración local (NUNCA commitear valores reales)
+# ------------------------------------------------------------
+.env
+.env.*
+!.env.example
+
+# Configuración local del backend (API key de Odoo, JWT y operadores).
+# Se versiona solo el ejemplo. Cubre también la copia que genera el build en bin/.
+**/appsettings.Development.json
+!**/appsettings.Development.json.example
+appsettings.*.local.json
+*.pfx
+*.p12
+secrets.json
+credentials.json
+*.pem
+*.key
+
+# Ajustes locales de Docker (por ejemplo, la IP de Tailscale de cada equipo)
+docker-compose.override.yml
+
+# ------------------------------------------------------------
+# .NET / Visual Studio / Rider
+# ------------------------------------------------------------
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+build/
+bld/
+[Ll]og/
+[Ll]ogs/
+
+.vs/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.DotSettings.user
+*.rsuser
+
+# Artefactos de compilación y paquetes
+*.dll
+*.exe
+*.pdb
+*.mdb
+*.cache
+*.nupkg
+*.snupkg
+packages/
+!**/packages/build/
+
+# Resultados de pruebas y cobertura
+[Tt]est[Rr]esult*/
+*.trx
+*.coverage
+*.coveragexml
+coverage/
+coverage.*
+*.opencover.xml
+
+# ------------------------------------------------------------
+# Node / Vite / frontend
+# ------------------------------------------------------------
+node_modules/
+dist/
+dist-ssr/
+.vite/
+*.tsbuildinfo
+*.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.npm/
+.pnpm-store/
+
+# Cobertura de tests del frontend
+frontend/coverage/
+
+# ------------------------------------------------------------
+# Logs y temporales
+# ------------------------------------------------------------
+*.log
+logs/
+*.tmp
+*.temp
+~$*
+
+# ------------------------------------------------------------
+# Sistema operativo / editores
+# ------------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+.vscode/
+.cursor/
