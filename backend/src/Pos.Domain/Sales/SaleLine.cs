@@ -8,6 +8,7 @@ namespace Pos.Domain.Sales;
 /// </summary>
 public sealed class SaleLine
 {
+    /// <summary>Cantidad máxima por línea.</summary>
     public const decimal MaxQuantity = 100_000m;
 
     private SaleLine(long productId, decimal quantity)
@@ -16,10 +17,15 @@ public sealed class SaleLine
         Quantity = quantity;
     }
 
+    /// <summary>Id de product.product en Odoo.</summary>
     public long ProductId { get; }
 
+    /// <summary>Cantidad (&gt; 0).</summary>
     public decimal Quantity { get; }
 
+    /// <summary>Crea la línea o lanza <see cref="DomainValidationException"/> (RN02).</summary>
+    /// <param name="productId">Id del producto (&gt; 0).</param>
+    /// <param name="quantity">Cantidad (&gt; 0).</param>
     public static SaleLine Create(long productId, decimal quantity)
     {
         if (productId <= 0)

@@ -8,6 +8,7 @@ namespace Pos.Domain.Sales;
 /// </summary>
 public sealed class SaleDraft
 {
+    /// <summary>Máximo de líneas por venta.</summary>
     public const int MaxLines = 100;
 
     private SaleDraft(Guid operationId, IReadOnlyList<SaleLine> lines)
@@ -16,10 +17,15 @@ public sealed class SaleDraft
         Lines = lines;
     }
 
+    /// <summary>Identificador de operación; se usa como uuid de pos.order (RN07).</summary>
     public Guid OperationId { get; }
 
+    /// <summary>Líneas validadas.</summary>
     public IReadOnlyList<SaleLine> Lines { get; }
 
+    /// <summary>Crea la venta o lanza <see cref="DomainValidationException"/> si no tiene líneas (RN01).</summary>
+    /// <param name="operationId">Identificador del cliente; si falta se genera uno nuevo.</param>
+    /// <param name="lines">Líneas ya validadas.</param>
     public static SaleDraft Create(Guid? operationId, IEnumerable<SaleLine>? lines)
     {
         var materializedLines = lines?.ToList() ?? [];

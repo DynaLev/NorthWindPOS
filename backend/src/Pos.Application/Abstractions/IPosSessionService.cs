@@ -2,8 +2,12 @@ using Pos.Application.Models;
 
 namespace Pos.Application.Abstractions;
 
+/// <summary>
+/// Reglas de sesión POS compartidas por varios casos de uso (RN04, RN05).
+/// </summary>
 public interface IPosSessionService
 {
+    /// <summary>Devuelve la sesión abierta del POS configurado o lanza NotFoundException.</summary>
     Task<PosSessionInfo> GetActiveAsync(CancellationToken cancellationToken);
 
     /// <summary>
@@ -12,12 +16,5 @@ public interface IPosSessionService
     /// </summary>
     Task<PosSessionInfo> ResolveForSaleAsync(
         long? sessionId,
-        CancellationToken cancellationToken);
-}
-
-public interface ICatalogService
-{
-    Task<IReadOnlyList<ProductInfo>> SearchAsync(
-        string? search,
         CancellationToken cancellationToken);
 }
