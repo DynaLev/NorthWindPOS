@@ -8,5 +8,7 @@
   </Folder>
   <Folder Name="/backend/tests/">
     <Project Path="backend/tests/Pos.Application.Tests/Pos.Application.Tests.csproj" />
+    <Project Path="backend/tests/Pos.Integration.Tests/Pos.Integration.Tests.csproj" />
+    <Project Path="backend/tests/Pos.WebApi.Tests/Pos.WebApi.Tests.csproj" />
   </Folder>
 </Solution>

@@ -8,15 +8,17 @@
   "Jwt": {
     "Issuer": "NorthWindPOS",
     "Audience": "NorthWindPOS",
-    "SigningKey": "CAMBIAR_POR_UNA_CLAVE_LARGA_Y_ALEATORIA",
+    "SigningKey": "USAR_dotnet_user-secrets_O_Jwt__SigningKey_MINIMO_32_CARACTERES",
     "ExpirationMinutes": 480
   },
   "Odoo": {
     "BaseUrl": "http://127.0.0.1:8070",
     "Database": "odoo20_northwind",
-    "ApiKey": "CAMBIAR_POR_TU_API_KEY_DE_ODOO",
+    "ApiKey": "USAR_dotnet_user-secrets_O_Odoo__ApiKey",
     "TimeoutSeconds": 30,
-    "MaxRetries": 1
+    "MaxRetries": 1,
+    "RetryDelayMilliseconds": 300,
+    "PosConfigId": 1
   },
   "Auth": {
     "Operators": [

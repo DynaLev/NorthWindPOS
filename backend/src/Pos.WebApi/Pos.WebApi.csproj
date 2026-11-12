@@ -4,6 +4,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>northwindpos-webapi-7c3e2a10</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>

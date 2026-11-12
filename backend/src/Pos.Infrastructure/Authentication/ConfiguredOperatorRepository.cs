@@ -1,7 +1,6 @@
 using Microsoft.Extensions.Configuration;
 using Pos.Application.Abstractions;
 using Pos.Application.Models;
-using System.Text.Json;
 
 namespace Pos.Infrastructure.Authentication;
 

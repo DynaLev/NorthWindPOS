@@ -1,6 +1,44 @@
-@Pos.WebApi_HostAddress = http://localhost:5062
+# Peticiones de prueba para Visual Studio / VS Code (REST Client).
+# 1) Ejecute "login" y copie accessToken en @token.
+@host = http://localhost:5000
+@token = PEGAR_AQUI_EL_ACCESS_TOKEN
 
-GET {{Pos.WebApi_HostAddress}}/weatherforecast/
-Accept: application/json
+### Login del cajero de demostración
+POST {{host}}/api/auth/login
+Content-Type: application/json
 
-###
+{ "username": "cajero", "password": "Cajero123!" }
+
+### Productos del POS
+GET {{host}}/api/products?search=norte
+Authorization: Bearer {{token}}
+
+### Sesión POS activa
+GET {{host}}/api/pos/sessions/active
+Authorization: Bearer {{token}}
+
+### Sesiones abiertas
+GET {{host}}/api/pos/sessions
+Authorization: Bearer {{token}}
+
+### Venta con 2 productos y efectivo (reenviar con el mismo clientOperationId debe devolver replay=true)
+POST {{host}}/api/sales
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "clientOperationId": "7b0f1a52-4a1e-4f7e-9d7b-0c2f6f9e1a01",
+  "sessionId": 1,
+  "lines": [
+    { "productId": 3, "quantity": 2 },
+    { "productId": 4, "quantity": 1 }
+  ]
+}
+
+### Historial
+GET {{host}}/api/sales
+Authorization: Bearer {{token}}
+
+### Detalle (cambie el id)
+GET {{host}}/api/sales/1
+Authorization: Bearer {{token}}
