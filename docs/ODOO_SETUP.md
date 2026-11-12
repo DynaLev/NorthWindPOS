@@ -19,7 +19,7 @@
 
 ## 4) Prueba mínima (semana 1)
 1. Desde backend/test: llamar `/json/2/pos.session/search_read` con dominio `[["state","=","opened"]]`
-2. Llamar `/json/2/product.template/search_read` con `[["sale_ok","=",true],["available_in_pos","=",true]]` (limitado)
+2. Llamar `/json/2/product.product/search_read` con `[["sale_ok","=",true],["available_in_pos","=",true]]` (limitado)
 3. Probar `pos.order.sync_from_ui` con 2 líneas + pago en efectivo, `uuid` único
 4. Verificar orden creada/pagada en Odoo POS
 5. Reenviar mismo `uuid` → debe devolver orden existente (sin duplicado)
@@ -33,7 +33,8 @@ Stack `northwind-odoo20` (`docker-compose.odoo.yml`):
 - Web en este equipo: [http://127.0.0.1:8070](http://127.0.0.1:8070).
 - Web por Tailscale (con Tailscale encendido): [http://100.112.190.88:8070](http://100.112.190.88:8070). Usuario Odoo `admin` / `admin`.
 - El puerto 8069 lo ocupa otra instalación y no debe usarse para este proyecto.
-- Backend: `Odoo:BaseUrl` = `http://127.0.0.1:8070`, `Odoo:Database` = `odoo20_northwind`. La API key vive solo en `appsettings.Development.json`.
+- Backend: `Odoo:BaseUrl` = `http://127.0.0.1:8070`, `Odoo:Database` = `odoo20_northwind`, `Odoo:PosConfigId` = `1`. La API key va en `dotnet user-secrets` (o en `appsettings.Development.json` local, ignorado por Git); nunca en el repositorio.
+- IDs de este equipo: `pos.config` 1 (Northwind Caja), `pos.session` 1 (`Northwind Caja/00001`), productos 3 (Cafe Norte) y 4 (Sandwich Norte), `pos.payment.method` 1 (Cash).
 - Cajero de la aplicación web: usuario `cajero`, contraseña `Cajero123!`. La caja está en [http://127.0.0.1:5173](http://127.0.0.1:5173).
 
 Tailscale tiene que estar encendido para abrir la IP `100.112.190.88`. Tailscale Serve (HTTPS en `*.ts.net`) sigue sin estar habilitado; el acceso es HTTP por esa IP.

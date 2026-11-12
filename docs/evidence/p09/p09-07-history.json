@@ -1,0 +1,72 @@
+[
+  {
+    "orderId": 10,
+    "orderName": "Northwind Caja - 000007",
+    "operationId": "5db73bda-969e-496c-aa88-0abd2efbeab0",
+    "date": "2026-11-12T04:20:45-05:00",
+    "total": 10.35,
+    "state": "paid",
+    "paymentMethodName": "Cash",
+    "currency": "USD"
+  },
+  {
+    "orderId": 9,
+    "orderName": "Northwind Caja - 000006",
+    "operationId": "27e136ab-6b51-49f2-b1c6-d8d18a331081",
+    "date": "2026-11-12T04:20:44-05:00",
+    "total": 10.35,
+    "state": "paid",
+    "paymentMethodName": "Cash",
+    "currency": "USD"
+  },
+  {
+    "orderId": 8,
+    "orderName": "Northwind Caja - 000005",
+    "operationId": "2e91048c-bdeb-4d10-968f-c6776eeb17b5",
+    "date": "2026-11-12T04:20:22-05:00",
+    "total": 10.35,
+    "state": "paid",
+    "paymentMethodName": "Cash",
+    "currency": "USD"
+  },
+  {
+    "orderId": 7,
+    "orderName": "Northwind Caja - 000004",
+    "operationId": "eff5167b-56ee-4d41-9b90-1aa874cefb53",
+    "date": "2026-11-12T04:20:21-05:00",
+    "total": 10.35,
+    "state": "paid",
+    "paymentMethodName": "Cash",
+    "currency": "USD"
+  },
+  {
+    "orderId": 3,
+    "orderName": "Northwind Caja - 000003",
+    "operationId": "ceaf641d-e03b-47c3-9cd1-577d276f73e7",
+    "date": "2026-11-06T15:20:27-05:00",
+    "total": 7.48,
+    "state": "done",
+    "paymentMethodName": "Cash",
+    "currency": "USD"
+  },
+  {
+    "orderId": 2,
+    "orderName": "Northwind Caja - 000002",
+    "operationId": "43908777-3ade-444b-b3e8-7a6d9601d96f",
+    "date": "2026-11-06T15:19:30-05:00",
+    "total": 7.48,
+    "state": "done",
+    "paymentMethodName": "Cash",
+    "currency": "USD"
+  },
+  {
+    "orderId": 1,
+    "orderName": "Northwind Caja - 000001",
+    "operationId": "1ed349eb-d973-49b0-9462-cf2b6fd974c8",
+    "date": "2026-11-06T15:18:07-05:00",
+    "total": 7.48,
+    "state": "done",
+    "paymentMethodName": "Cash",
+    "currency": "USD"
+  }
+]

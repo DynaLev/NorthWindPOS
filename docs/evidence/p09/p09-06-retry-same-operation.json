@@ -1,0 +1,43 @@
+{
+  "orderId": 10,
+  "orderName": "Northwind Caja - 000007",
+  "operationId": "5db73bda-969e-496c-aa88-0abd2efbeab0",
+  "state": "paid",
+  "date": "2026-11-12T04:20:45-05:00",
+  "total": 10.35,
+  "tax": 1.35,
+  "paid": 10.35,
+  "returned": 0.0,
+  "currency": "USD",
+  "sessionId": 1,
+  "configId": 1,
+  "paymentMethodName": "Cash",
+  "lines": [
+    {
+      "productId": 3,
+      "name": "[NW-CAFE] Cafe Norte",
+      "quantity": 2.0,
+      "unitPrice": 2.5,
+      "subtotal": 5.0,
+      "subtotalWithTax": 5.75
+    },
+    {
+      "productId": 4,
+      "name": "[NW-SAND] Sandwich Norte",
+      "quantity": 1.0,
+      "unitPrice": 4.0,
+      "subtotal": 4.0,
+      "subtotalWithTax": 4.6
+    }
+  ],
+  "payments": [
+    {
+      "id": 10,
+      "paymentMethodId": 1,
+      "paymentMethodName": "Cash",
+      "amount": 10.35,
+      "isCash": true
+    }
+  ],
+  "replay": true
+}

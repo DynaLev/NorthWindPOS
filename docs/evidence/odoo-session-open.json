@@ -1,0 +1,15 @@
+{
+    "id":  1,
+    "name":  "Northwind Caja/00001",
+    "state":  "opened",
+    "config_id":  [
+                      1,
+                      "Northwind Caja"
+                  ],
+    "user_id":  [
+                    2,
+                    "Administrator"
+                ],
+    "start_at":  "2026-11-06 15:10:49",
+    "stop_at":  false
+}

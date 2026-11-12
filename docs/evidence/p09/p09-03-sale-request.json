@@ -1,0 +1,14 @@
+{
+  "clientOperationId": "5db73bda-969e-496c-aa88-0abd2efbeab0",
+  "sessionId": 1,
+  "lines": [
+    {
+      "productId": 3,
+      "quantity": 2
+    },
+    {
+      "productId": 4,
+      "quantity": 1
+    }
+  ]
+}

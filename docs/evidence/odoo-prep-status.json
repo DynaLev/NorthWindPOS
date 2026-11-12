@@ -1,0 +1,66 @@
+{
+    "timestamp":  "2026-11-11 22:35:00 -05:00",
+    "odoo":  {
+                 "containers":  "Up: northwind-odoo20-odoo-1 (odoo:20.0), northwind-odoo20-db-1 (postgres:16, healthy)",
+                 "login":  "http://127.0.0.1:8070/web/login -\u003e 200",
+                 "database":  "odoo20_northwind",
+                 "json2Auth":  "ok (Authorization Bearer + X-Odoo-Database); API key presente (44 chars), nunca escrita en estos archivos"
+             },
+    "session":  {
+                    "id":  1,
+                    "name":  "Northwind Caja/00001",
+                    "state":  "opened",
+                    "config":  "pos.config 1 Northwind Caja",
+                    "user":  "Administrator (id 2)",
+                    "start_at":  "2026-11-06 15:10:49",
+                    "note":  "Ya estaba abierta. No se reiniciaron contenedores. Se invocó pos.config.open_ui por un error de parseo; devolvió act_url /pos/ui/1?from_backend=True y el estado siguió opened con el mismo id."
+                },
+    "productsForP09":  [
+                           {
+                               "id":  3,
+                               "name":  "Cafe Norte",
+                               "default_code":  "NW-CAFE",
+                               "list_price":  2.5,
+                               "qty_available":  0,
+                               "type":  "consu",
+                               "available_in_pos":  true
+                           },
+                           {
+                               "id":  4,
+                               "name":  "Sandwich Norte",
+                               "default_code":  "NW-SAND",
+                               "list_price":  4,
+                               "qty_available":  0,
+                               "type":  "consu",
+                               "available_in_pos":  true
+                           }
+                       ],
+    "otherPosProducts":  [
+                             {
+                                 "id":  2,
+                                 "name":  "Service Fee",
+                                 "default_code":  "FEE",
+                                 "list_price":  0,
+                                 "qty_available":  0,
+                                 "type":  "service"
+                             }
+                         ],
+    "cashMethod":  {
+                       "id":  1,
+                       "name":  "Cash",
+                       "type":  "cash",
+                       "journal_id":  [
+                                          9,
+                                          "Cash"
+                                      ]
+                   },
+    "environment":  {
+                        "dotnetSdks":  "10.0.401",
+                        "node":  "v24.19.0",
+                        "npm":  "11.17.0",
+                        "dotnetRestore":  "ok (NorthWindPOS.slnx, exit 0)",
+                        "npmInstall":  "ok (frontend, already up to date, exit 0)"
+                    },
+    "qtyNote":  "qty_available=0 porque Cafe y Sandwich son consumibles (type=consu) y Service Fee es service; no llevan stock. Sirven para P09.",
+    "secrets":  "No se escribió API key, JWT ni appsettings.Development.json en evidencia ni en git."
+}

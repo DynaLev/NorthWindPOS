@@ -1,0 +1,13 @@
+{
+  "id": 1,
+  "name": "Northwind Caja/00001",
+  "configId": 1,
+  "configName": "Northwind Caja",
+  "state": "opened",
+  "companyId": 1,
+  "currency": "USD",
+  "currencyDecimalPlaces": 2,
+  "cashPaymentMethodId": 1,
+  "cashPaymentMethodName": "Cash",
+  "openedAt": "2026-11-06T15:10:49-05:00"
+}

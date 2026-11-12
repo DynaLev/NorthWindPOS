@@ -1,0 +1,32 @@
+[
+    {
+        "id":  2,
+        "name":  "Service Fee",
+        "display_name":  "[FEE] Service Fee",
+        "default_code":  "FEE",
+        "list_price":  0.0,
+        "qty_available":  0.0,
+        "available_in_pos":  true,
+        "type":  "service"
+    },
+    {
+        "id":  3,
+        "name":  "Cafe Norte",
+        "display_name":  "[NW-CAFE] Cafe Norte",
+        "default_code":  "NW-CAFE",
+        "list_price":  2.5,
+        "qty_available":  0.0,
+        "available_in_pos":  true,
+        "type":  "consu"
+    },
+    {
+        "id":  4,
+        "name":  "Sandwich Norte",
+        "display_name":  "[NW-SAND] Sandwich Norte",
+        "default_code":  "NW-SAND",
+        "list_price":  4.0,
+        "qty_available":  0.0,
+        "available_in_pos":  true,
+        "type":  "consu"
+    }
+]
