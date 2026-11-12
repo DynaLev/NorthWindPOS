@@ -1,10 +1,12 @@
 import { useState, type FormEvent } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { api, ApiError } from '../api/client'
-import { saveSession } from '../auth/session'
+import { describeError } from '../../application/errors'
+import { login } from '../../application/useCases/auth'
 import { ErrorAlert } from '../components/ErrorAlert'
+import { useServices } from '../ServicesContext'
 
 export function LoginPage() {
+  const { api, session } = useServices()
   const navigate = useNavigate()
   const [username, setUsername] = useState('cajero')
   const [password, setPassword] = useState('')
@@ -16,11 +18,10 @@ export function LoginPage() {
     setError('')
     setBusy(true)
     try {
-      const token = await api.login(username, password)
-      saveSession(token.accessToken, token.operator.displayName || token.operator.username)
+      await login(api, session, username, password)
       navigate('/pos')
     } catch (err) {
-      setError(err instanceof ApiError ? err.message : 'No se pudo iniciar sesión.')
+      setError(describeError(err, 'No se pudo iniciar sesión.'))
     } finally {
       setBusy(false)
     }

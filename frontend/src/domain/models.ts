@@ -1,3 +1,5 @@
+// Modelos del dominio del POS web. Sin React ni fetch: solo datos.
+
 export interface Operator {
   username: string
   displayName: string
@@ -15,8 +17,12 @@ export interface Product {
   name: string
   code: string | null
   barcode: string | null
+  /** Precio de lista sin impuestos informado por Odoo. */
   price: number
   currency: string
+  /** Stock disponible; null si el producto no controla inventario. */
+  availableQuantity: number | null
+  tracksInventory: boolean
   unit: string
 }
 
@@ -27,6 +33,7 @@ export interface PosSession {
   configName: string
   state: string
   currency: string
+  currencyDecimalPlaces?: number
   cashPaymentMethodId: number | null
   cashPaymentMethodName: string | null
 }
@@ -77,9 +84,8 @@ export interface SaleSummary {
   currency: string
 }
 
-export interface CartLine {
+/** Línea que el cajero pide; el precio real lo define Odoo al cobrar (RN06). */
+export interface SaleLineRequest {
   productId: number
-  name: string
   quantity: number
-  unitPrice: number
 }
